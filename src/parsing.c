@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 11:26:17 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/04 11:35:24 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/02/04 12:11:11 by mago             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	parsing(int argc, char argv)
+int	parsing(int argc, char **argv)
 {
 	
 }

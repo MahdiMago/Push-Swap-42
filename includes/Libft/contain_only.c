@@ -3,22 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   contain_only.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 17:19:11 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/01/21 18:46:56 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/02/04 14:30:18 by mago             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	contain_only(char *str)
+int	contain_only(char *str, char *autorised)
 {
 	int		i;
 	int		j;
-	char	*autorised;
 
-	autorised = "10PEC\n";
 	i = 0;
 	while (str[i])
 	{

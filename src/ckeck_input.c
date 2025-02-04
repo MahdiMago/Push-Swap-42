@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ckeck_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 11:10:27 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/04 11:39:43 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/02/04 14:33:02 by mago             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	check_arg(char **argv)
+int	check_caracter(char **argv)
 {
-	
+	int	i;
+
+	i = 0;
+	while ()
 }
