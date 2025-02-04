@@ -1,16 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ckeck_input.c                                      :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/04 11:10:27 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/04 11:39:43 by mamagoma         ###   ########.fr       */
+/*   Created: 2024/11/14 14:17:19 by mamagoma          #+#    #+#             */
+/*   Updated: 2024/11/14 21:29:42 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	check_arg(char **argv)
+#include "libft.h"
+
+// void	*del(void *content)
+// {
+// 	free(content);
+// }
+
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	
+	if (lst == NULL || del == NULL)
+		return ;
+	del(lst -> content);
+	free(lst);
 }

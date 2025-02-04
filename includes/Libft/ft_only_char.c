@@ -1,16 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ckeck_input.c                                      :+:      :+:    :+:   */
+/*   ft_only_char.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/04 11:10:27 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/04 11:39:43 by mamagoma         ###   ########.fr       */
+/*   Created: 2024/12/22 19:26:18 by mamagoma          #+#    #+#             */
+/*   Updated: 2024/12/22 19:58:13 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	check_arg(char **argv)
+#include "libft.h"
+
+int	ft_only_char(const char *str, char c)
 {
-	
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] != c)
+			return (1);
+		i++;
+	}
+	return (0);
 }

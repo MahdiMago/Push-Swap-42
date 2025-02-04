@@ -1,16 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ckeck_input.c                                      :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/04 11:10:27 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/04 11:39:43 by mamagoma         ###   ########.fr       */
+/*   Created: 2024/11/14 13:52:06 by mamagoma          #+#    #+#             */
+/*   Updated: 2024/11/14 21:38:00 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	check_arg(char **argv)
+#include "libft.h"
+
+int	ft_lstsize(t_list *lst)
 {
-	
+	int	i;
+
+	i = 0;
+	while (lst != NULL)
+	{
+		i++;
+		lst = lst -> next;
+	}
+	return (i);
 }

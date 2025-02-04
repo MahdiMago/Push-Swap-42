@@ -1,16 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ckeck_input.c                                      :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/04 11:10:27 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/04 11:39:43 by mamagoma         ###   ########.fr       */
+/*   Created: 2024/11/09 20:58:53 by mamagoma          #+#    #+#             */
+/*   Updated: 2024/11/17 19:38:24 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	check_arg(char **argv)
+#include "libft.h"
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	
+	char			*resultat;
+	unsigned int	i;
+
+	if (!s)
+		return (NULL);
+	resultat = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!resultat)
+		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		resultat[i] = f(i, s[i]);
+		i++;
+	}
+	resultat[i] = '\0';
+	return (resultat);
 }

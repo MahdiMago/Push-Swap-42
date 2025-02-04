@@ -1,16 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ckeck_input.c                                      :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/04 11:10:27 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/04 11:39:43 by mamagoma         ###   ########.fr       */
+/*   Created: 2024/11/07 22:34:22 by mamagoma          #+#    #+#             */
+/*   Updated: 2024/11/12 09:47:07 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	check_arg(char **argv)
+#include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	
+	size_t				i;
+	unsigned char		*s1;
+
+	i = 0;
+	s1 = (void *)s;
+	while (i < n)
+	{
+		if (s1[i] == (unsigned char)c)
+			return (&s1[i]);
+		i++;
+	}
+	return (NULL);
 }
+
+// int	main()
+// {
+// 	const char s1[] = "Mahdui";
+// 	int	c = 'h';
+
+// 	printf("%s", ft_memchr(s1, c, 50));
+// }

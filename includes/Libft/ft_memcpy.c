@@ -1,16 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ckeck_input.c                                      :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/04 11:10:27 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/04 11:39:43 by mamagoma         ###   ########.fr       */
+/*   Created: 2024/11/05 15:46:22 by mamagoma          #+#    #+#             */
+/*   Updated: 2024/11/11 18:05:42 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	check_arg(char **argv)
+#include "libft.h"
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	
+	unsigned char	*s1;
+	unsigned char	*s2;
+
+	s1 = (unsigned char *)src;
+	s2 = (unsigned char *)dest;
+	while (n > 0)
+	{
+		*s2 = *s1;
+		s1++;
+		s2++;
+		n--;
+	}
+	return (dest);
 }

@@ -1,16 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ckeck_input.c                                      :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/04 11:10:27 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/04 11:39:43 by mamagoma         ###   ########.fr       */
+/*   Created: 2024/11/18 23:12:27 by mamagoma          #+#    #+#             */
+/*   Updated: 2024/11/18 23:13:11 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	check_arg(char **argv)
+#include "ft_printf.h"
+
+int	ft_putptr(void *ptr)
 {
-	
+	unsigned long long	addr;
+	int					count;
+
+	addr = (unsigned long long)ptr;
+	count = 0;
+	if (!ptr)
+	{
+		count += ft_putstr("(nil)");
+		return (count);
+	}
+	count += ft_putstr("0x");
+	count += ft_puthex(addr, 0);
+	return (count);
 }
