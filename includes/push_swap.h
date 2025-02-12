@@ -6,7 +6,7 @@
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 11:19:34 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/05 11:49:39 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/02/11 17:34:00 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ struct s_list_a
 {
 	int				value;
 	int				index;
-	struct list_a	*prev;
 	struct list_a	*next;
 };
 
@@ -32,8 +31,12 @@ struct s_list_b
 {
 	int				value;
 	int				index;
-	struct list_b	*prev;
 	struct list_b	*next;
 };
+
+char	*split_arguments(char **argv);
+int		check_caracters(char **argv);
+int		check_double_2(char *s1, char *s2);
+int		check_double(char **args);
 
 #endif
