@@ -6,7 +6,7 @@
 /*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 11:10:27 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/12 22:35:21 by mago             ###   ########.fr       */
+/*   Updated: 2025/02/13 21:45:36 by mago             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,5 +119,6 @@ int check_input(int argc, char **argv)
 			free_split(args);
 		return (0);
 	}
+	free_split(args);
 	return (1);
 }
