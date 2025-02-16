@@ -6,7 +6,7 @@
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 11:40:33 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/05 11:45:51 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/02/15 12:14:07 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@
 # include <stdio.h>
 # include <stdint.h>
 
-typedef struct s_list
+typedef struct st_list
 {
 	void			*content;
-	struct s_list	*next;
-}	t_list;
+	struct st_list	*next;
+}	tt_list;
 
-int		ft_atoi(const char *nptr);
+long		ft_atoi(const char *nptr);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -65,14 +65,14 @@ int		ft_only_char(const char *str, char c);
 int		count_char_occurrences(const char *str, char c);
 int		contain_only(char *str);
 
-void	ft_lstadd_back(t_list **lst, t_list *new);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-void	ft_lstclear(t_list **lst, void (*del)(void*));
-void	ft_lstdelone(t_list *lst, void (*del)(void*));
-void	ft_lstiter(t_list *lst, void (*f)(void *));
-t_list	*ft_lstlast(t_list *lst);
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-t_list	*ft_lstnew(void *content);
-int		ft_lstsize(t_list *lst);
+void	ft_lstadd_back(tt_list **lst, tt_list *new);
+void	ft_lstadd_front(tt_list **lst, tt_list *new);
+void	ft_lstclear(tt_list **lst, void (*del)(void*));
+void	ft_lstdelone(tt_list *lst, void (*del)(void*));
+void	ft_lstiter(tt_list *lst, void (*f)(void *));
+tt_list	*ft_lstlast(tt_list *lst);
+tt_list	*ft_lstmap(tt_list *lst, void *(*f)(void *), void (*del)(void *));
+tt_list	*ft_lstnew(void *content);
+int		ft_lstsize(tt_list *lst);
 
 #endif

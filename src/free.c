@@ -1,13 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   free.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/13 21:51:19 by mamagoma          #+#    #+#             */
+/*   Updated: 2025/02/13 22:06:01 by mamagoma         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/push_swap.h"
 
-void	free_split(char **str);
+void	free_split(char **str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i])
 	{
-		free(str[i])
+		if (str[i])
+			free(str[i]);
 		i++;
 	}
 }

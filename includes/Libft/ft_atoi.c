@@ -6,16 +6,16 @@
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:47:20 by mamagoma          #+#    #+#             */
-/*   Updated: 2024/11/14 21:37:07 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/02/14 17:31:56 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
 	int		signe;
-	size_t	result;
+	long	result;
 	size_t	i;
 
 	i = 0;

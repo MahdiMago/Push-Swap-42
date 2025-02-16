@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 11:19:34 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/12 22:34:04 by mago             ###   ########.fr       */
+/*   Updated: 2025/02/15 14:04:26 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,25 +20,20 @@
 # include "Libft/libft.h"
 # include "ft_printf/ft_printf.h"
 
-struct s_list_a
+typedef struct s_list
 {
-    int				value;
-    int				index;
-    struct s_list_a	*next;
-} t_list_a;
+	int				value;
+	int				index;
+	struct s_list	*next;
+}	t_list;
 
-struct s_list_b
-{
-    int				value;
-    int				index;
-    struct s_list_b	*next;
-} t_list_b;
-
-int	is_greater_than_max(const char *str);
-int	check_characters(char **argv);
-int	check_duplicates(char **args);
-int	check_input(int argc, char **argv);
+int		is_greater_than_max(const char *str);
+int		check_characters(char **argv);
+int		check_duplicates(char **args);
+int		check_input(int argc, char **argv);
 void	free_split(char **str);
+t_list	*ft_lstnew(int *value);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+t_list	set_up(t_list *list_a, char **args);
 
 #endif
-

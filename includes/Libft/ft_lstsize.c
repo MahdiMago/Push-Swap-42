@@ -6,13 +6,13 @@
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:52:06 by mamagoma          #+#    #+#             */
-/*   Updated: 2024/11/14 21:38:00 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/02/15 11:59:00 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+int	ft_lstsize(tt_list *lst)
 {
 	int	i;
 

@@ -6,17 +6,17 @@
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 20:26:59 by mamagoma          #+#    #+#             */
-/*   Updated: 2024/11/14 21:33:31 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/02/15 11:58:58 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+tt_list	*ft_lstmap(tt_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new_lst;
-	t_list	*last;
-	t_list	*new_elem;
+	tt_list	*new_lst;
+	tt_list	*last;
+	tt_list	*new_elem;
 
 	if (lst == NULL || f == NULL || del == NULL)
 		return (NULL);

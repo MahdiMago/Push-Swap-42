@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   check_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 11:10:27 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/13 21:45:36 by mago             ###   ########.fr       */
+/*   Updated: 2025/02/15 13:31:13 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+#include <limits.h>
 
 static int	is_valid_number(char *str)
 {
@@ -30,51 +31,50 @@ static int	is_valid_number(char *str)
 	return (1);
 }
 
-int is_greater_than_max(const char *str)
-{
-	const char	*int_max;
-	int			len;
-	int			i;
+// int is_greater_than_max(const char *str)
+// {
+// 	int		i;
+// 	long	num;
 
-	while (*str == '0')
-		str++;
-	if (*str == '-')
-	{
-		int_max = "2147483648";
-		str++;
-	}
-	else
-	{
-		if (*str == '+')
-			str++;
-		int_max = "2147483647";
-	}
-	len = strlen(str);
-	if (len > 10)
-		return (1);
-	if (len < 10)
-		return (0);
+// 	i = 0;
+
+// 	while (str[i])
+// 	{
+// 		while (str[i] && (str[i] == ' ' || str[i] == '\t'))
+// 			i++;
+// 		num = ft_atoi(&str[i]);
+// 		if (num > INT_MAX || num < INT_MIN)
+// 			return (ft_printf("Error : number out of limits\n"), 1);
+// 		while (str[i] != ' ' && str[i] != '\t')
+// 			i++;
+// 		i++;
+// 	}
+// 	return (0);
+// }
+
+int	is_greater_than_max(const char *str)
+{
+	long	num;
+	int		i;
+
 	i = 0;
-	while (str[i])
-	{
-		if (str[i] > int_max[i])
-			return (1);
-		if (str[i] < int_max[i])
-			return (0);
+	while (str[i] == ' ' || str[i] == '\t')
 		i++;
-	}
+	num = ft_atoi(&str[i]);
+	if (num > INT_MAX || num < INT_MIN)
+		return (ft_printf("Error : number out of limits\n"), 1);
 	return (0);
 }
 
-int check_characters(char **argv)
+int check_characters(char **args)
 {
 	int	i;
 
-	i = 1;
-	while (argv[i])
+	i = 0;
+	while (args[i])
 	{
-		if (!is_valid_number(argv[i])
-			|| is_greater_than_max(argv[i]))
+		if (!is_valid_number(args[i])
+			|| is_greater_than_max(args[i]) != 0)
 			return (0);
 		i++;
 	}
@@ -119,6 +119,5 @@ int check_input(int argc, char **argv)
 			free_split(args);
 		return (0);
 	}
-	free_split(args);
 	return (1);
 }

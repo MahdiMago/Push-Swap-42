@@ -6,7 +6,7 @@
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 14:17:19 by mamagoma          #+#    #+#             */
-/*   Updated: 2024/11/14 21:29:42 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/02/15 12:40:10 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 // 	free(content);
 // }
 
-void	ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(tt_list *lst, void (*del)(void*))
 {
 	if (lst == NULL || del == NULL)
 		return ;
