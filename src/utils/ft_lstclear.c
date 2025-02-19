@@ -6,7 +6,7 @@
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 19:42:11 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/16 16:57:00 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/02/18 12:30:13 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	while (*lst)
 	{
 		tempo = (*lst)-> next;
-		del((*lst)-> content);
 		free(*lst);
 		*lst = tempo;
 	}
