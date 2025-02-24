@@ -6,7 +6,7 @@
 /*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 11:19:34 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/24 13:24:46 by mago             ###   ########.fr       */
+/*   Updated: 2025/02/24 14:38:27 by mago             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,17 @@ void	swap(t_list **list);
 void	rotate(t_list **list);
 void	reverse_rotate(t_list **list);
 void	push_list(t_list **top_1,  t_list **top_2);
+
+void	sa(t_list **list_a);
+void	sb(t_list **list_b);
+void	ra(t_list **list_a);
+void	rb(t_list **list_b);
+void	rra(t_list **list_a);
+void	rrb(t_list **list_b);
+void	ss(t_list **list_a, t_list **list_b);
+void	pa(t_list **list_a, t_list **list_b);
+void	pb(t_list **list_a, t_list **list_b);
+void	rr(t_list **list_a, t_list **list_b);
+void	rrr(t_list **list_a, t_list **list_b);
 
 #endif
