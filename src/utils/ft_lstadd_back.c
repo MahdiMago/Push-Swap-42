@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:57:22 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/16 16:29:46 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/02/23 20:36:07 by mago             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ftt_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 

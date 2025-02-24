@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:20:20 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/15 13:22:36 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/02/23 20:36:11 by mago             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-t_list	*ft_lstnew(int *value)
+t_list	*ftt_lstnew(int *value)
 {
 	t_list	*new;
 

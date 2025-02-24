@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 11:23:30 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/16 16:50:36 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/02/24 13:26:29 by mago             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,3 +46,20 @@ static char	**make_args(int argc, char **argv)
 		return (NULL);
 	return (args);
 }
+
+
+// int	main(void)
+// {
+// 	t_list *list = malloc(sizeof(t_list));
+// 	t_list *list2 = malloc(sizeof(t_list));
+// 	t_list *list3 = malloc(sizeof(t_list));
+
+// 	list->next = list2;
+// 	list2->next = list3;
+// 	list->value = 1;
+// 	list2->value = 5;
+// 	list3->value = 2;
+
+// 	sort_three(&list);
+// 	return (0);
+// }

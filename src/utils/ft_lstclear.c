@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 19:42:11 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/18 12:30:13 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/02/23 20:36:04 by mago             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+void	ftt_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*tempo;
 

@@ -3,68 +3,75 @@
 /*                                                        :::      ::::::::   */
 /*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 20:47:02 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/18 22:51:12 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/02/24 14:28:24 by mago             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-t_list	*swap(t_list *list)
+void	swap(t_list **list)
 {
 	t_list *second;
 
-	if (!list)
-		return (list);
-	second = list->next;
-	list->next = second->next;
-	second->next = list;
-	return (list);
+	if (!list || !(*list))
+		return ;
+	second = (*list)->next;
+	(*list)->next = second->next;
+	second->next = *list;
+	*list = second;
+	return ;
 }
 
-t_list	*rotate(t_list *list)
+/*
+* Décale tous les éléments de la pile de 1
+* Le premier élément devient le dernier
+*/
+void	rotate(t_list **list)
 {
 	t_list *last;
-	t_list *first;
 
-	if (!list || !list->next)
-		return (list);
-	last = list;
-	first = list;
+	if (!list || !(*list)->next || !(*list))
+		return ;
+	last = *list;
 	while (last->next)
 		last = last->next;
-	last->next = first;
-	first->next = NULL;
-	return (list);
+	last->next = *list;
+	*list = (*list)->next;
+	last->next->next = NULL;
+	return ;
 }
 
-t_list	*reverse_rotate(t_list *list)
+void	reverse_rotate(t_list **list)
 {
 	t_list	*last;
 	t_list	*new_head;
 
-	if (!list || !list->next)
-		return (list);
-	last = list;
+	if (!*list || !(*list)->next)
+		return ;
+	last = *list;
 	while (last->next->next)
 		last = last->next;
-	last->next->next = first;
+	last->next->next = *list;
 	new_head = last->next;
 	last->next = NULL;
-	return (new_head);
+	return ;
 }
 
-t_list	*push_list(t_list *list_a,  t_list *list_b)
+/*
+* the first param will be pushed in the top of the second
+*/
+void	push_list(t_list **top_1,  t_list **top_2)
 {
 	t_list	*new_head;
 
-	if (!list_a)
-		return (list_b);
-	new_head = list_a;
-	list_a = list_a->next;
-	new_head->next = list_b;
-	list_b = new_head;
-	return (list_b);
+	if (!*top_1)
+		return ;
+	new_head = *top_1;
+	*top_1 = (*top_1)->next;
+	new_head->next = *top_1;
+	*top_1 = new_head;
+	return ;
 }
