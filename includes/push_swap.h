@@ -6,7 +6,7 @@
 /*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 11:19:34 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/24 14:38:27 by mago             ###   ########.fr       */
+/*   Updated: 2025/02/25 22:58:09 by mago             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 typedef struct s_list
 {
 	int				value;
-	// int				index;
+	int				index;
 	struct s_list	*next;
 }	t_list;
 
@@ -40,6 +40,9 @@ void	ftt_lstclear(t_list **lst, void (*del)(void*));
 t_list	*find_big(t_list *list);
 t_list	*find_last(t_list *list);
 void	printf_list(t_list *list);
+int		count_elem(t_list *list);
+void	set_index(t_list **a);
+
 
 void	swap(t_list **list);
 void	rotate(t_list **list);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 11:40:33 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/15 12:14:07 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/02/25 22:24:06 by mago             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ void	free_char_array(char **array);
 int		ft_only_char(const char *str, char c);
 int		count_char_occurrences(const char *str, char c);
 int		contain_only(char *str);
+void	ft_swap(int	*a, int	*b);
 
 void	ft_lstadd_back(tt_list **lst, tt_list *new);
 void	ft_lstadd_front(tt_list **lst, tt_list *new);
