@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 20:47:02 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/24 14:28:24 by mago             ###   ########.fr       */
+/*   Updated: 2025/03/01 15:04:33 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,11 +67,11 @@ void	push_list(t_list **top_1,  t_list **top_2)
 {
 	t_list	*new_head;
 
-	if (!*top_1)
+	if (!*top_1 || !top_1 || !top_2)
 		return ;
 	new_head = *top_1;
 	*top_1 = (*top_1)->next;
-	new_head->next = *top_1;
-	*top_1 = new_head;
+	new_head->next = *top_2;
+	*top_2 = new_head;
 	return ;
 }

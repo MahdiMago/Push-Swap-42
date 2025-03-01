@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ftt_lstadd_back.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 16:47:20 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/03/01 14:22:10 by mamagoma         ###   ########.fr       */
+/*   Created: 2024/11/14 13:57:22 by mamagoma          #+#    #+#             */
+/*   Updated: 2025/03/01 15:34:52 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/push_swap.h"
 
-long	ft_atoi(const char *str)
+void	ftt_lstadd_back(t_list **lst, t_list *new)
 {
-	int		signe;
-	long	result;
-	size_t	i;
+	t_list	*last;
 
-	i = 0;
-	signe = 1;
-	result = 0;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	if (lst == NULL || new == NULL)
+		return ;
+	if (*lst == NULL)
 	{
-		if (str[i] == '-')
-			signe *= -1;
-		i++;
+		*lst = new;
+		return ;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result = result * 10 + (str[i] - '0');
-		i++;
-	}
-	return (result * signe);
+	last = *lst;
+	while (last -> next)
+		last = last -> next;
+	last->next = new;
 }

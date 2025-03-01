@@ -34,8 +34,8 @@ static void	set_target_a(t_list *a, t_list *b)
 		current_b = b;
 		while (current_b)
 		{
-			if (current_b->value > a->value
-				&& current_b > best_index)
+			if (current_b->value < a->value
+				&& current_b->value > best_index)
 			{
 				best_index = current_b->value;
 				target_node = current_b;

@@ -1,38 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ftt_lstnew.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 16:47:20 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/03/01 14:22:10 by mamagoma         ###   ########.fr       */
+/*   Created: 2024/11/14 13:20:20 by mamagoma          #+#    #+#             */
+/*   Updated: 2025/03/01 15:36:08 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/push_swap.h"
 
-long	ft_atoi(const char *str)
+t_list	*ftt_lstnew(int value)
 {
-	int		signe;
-	long	result;
-	size_t	i;
+	t_list	*new;
 
-	i = 0;
-	signe = 1;
-	result = 0;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-			signe *= -1;
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result = result * 10 + (str[i] - '0');
-		i++;
-	}
-	return (result * signe);
+	new = malloc(sizeof(*new));
+	if (!new)
+		return (NULL);
+	new->value = value;
+	new->next = NULL;
+	return (new);
 }

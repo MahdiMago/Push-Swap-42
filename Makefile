@@ -12,11 +12,20 @@ PRINTF_DIR = includes/ft_printf
 LIBFT_DIR = includes/Libft
 
 # Fichiers sources
-SRC_FILES = main.c parsing/check_input.c free.c parsing/store.c 
-PRINTF_FILES = ft_printf.c ft_putchar.c ft_puthex.c ft_putnbr.c ft_putptr.c ft_putstr.c ft_uputnbr.c
-LIBFT_FILES = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_split.c ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c
+SRC_FILES = main.c parsing/check_input.c free.c parsing/store.c \
+algorithm/init_node_a.c algorithm/sort.c algorithm/move_a_to_b.c algorithm/move_b_to_a.c \
+algorithm/sort_three.c rules/moves.c rules/swap.c utils/find_utils.c utils/ftt_lstnew.c \
+utils/ftt_lstadd_back.c utils/ftt_lstclear.c utils/print_list.c 
 
-# Chemins complets des fichiers sources
+LIBFT_FILES = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
+ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c \
+ft_memset.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_split.c \
+ft_strchr.c ft_strdup.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strncmp.c \
+ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c
+
+PRINTF_FILES = ft_printf.c ft_putchar.c ft_puthex.c ft_putnbr.c ft_putptr.c ft_putstr.c ft_uputnbr.c
+
+# Création des chemins complets
 SRC = $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 PRINTF_SRC = $(addprefix $(PRINTF_DIR)/, $(PRINTF_FILES))
 LIBFT_SRC = $(addprefix $(LIBFT_DIR)/, $(LIBFT_FILES))

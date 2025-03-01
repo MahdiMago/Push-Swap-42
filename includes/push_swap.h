@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 11:19:34 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/03/01 13:24:56 by mago             ###   ########.fr       */
+/*   Updated: 2025/03/01 15:45:34 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,33 +37,43 @@ int		is_greater_than_max(const char *str);
 int		check_characters(char **argv);
 int		check_duplicates(char **args);
 int		check_input(int argc, char **argv);
-void	free_split(char **str);
-void	ftt_lstadd_back(t_list **lst, t_list *new);
+void	set_value(t_list **list_a, char **args);
 
-t_list	*ftt_lstnew(int *value);
-void	ftt_lstclear(t_list **lst, void (*del)(void*));
+void	ftt_lstadd_back(t_list **lst, t_list *new);
+t_list	*ftt_lstnew(int value);
+void	ftt_lstclear(t_list *lst, void (*del)(void*));
+
 t_list	*find_big(t_list *list);
 t_list	*find_last(t_list *list);
+t_list	*find_min(t_list *list);
+int		list_len(t_list *lst);
+
+int		sort_list(t_list **a, t_list **b);
 void	printf_list(t_list *list);
-t_list	set_value(t_list *list_a, char **args);
+
+void	init_nodes_b(t_list *a, t_list *b);
+void	set_target_b(t_list *a, t_list *b);
+void	move_b_to_a(t_list **a, t_list **b);
+
+void	init_node_a(t_list *a, t_list *b);
+void	move_a_to_b(t_list **a, t_list **b);
+
+void	current_index(t_list *list);
+void	cheapest_value(t_list *lst);
+void	prep_for_push(t_list **lst, t_list *top_node, bool ab);
+t_list	*get_cheapest(t_list *lst);
 bool	is_stack_sorted(t_list *list);
 t_list	*find_min(t_list *list);
-int		sort_list(t_list **a, t_list **b);
+
 void	sort_three(t_list **list);
-void	cheapest_value(t_list *lst);
-void	init_node_a(t_list *a, t_list *b);
-void	current_index(t_list *list);
-void	prep_for_push(t_list **lst, t_list *top_node, bool ab);
-void	move_a_to_b(t_list **a, t_list **b);
-void	set_target_b(t_list *a, t_list *b);
-void	init_nodes_b(t_list *a, t_list *b);
-void	move_b_to_a(t_list **a, t_list **b);
+void	min_on_top(t_list **a);
+
+void	free_split(char **str);
 
 void	swap(t_list **list);
 void	rotate(t_list **list);
 void	reverse_rotate(t_list **list);
 void	push_list(t_list **top_1,  t_list **top_2);
-int		list_len(t_list *lst);
 
 void	rotate_both(t_list *cheapest_node, t_list **a, t_list **b);
 void	rev_rotate_both(t_list *cheapest_node, t_list **a, t_list **b);
