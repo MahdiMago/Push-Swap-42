@@ -98,3 +98,21 @@ void	rrr(t_list **list_a, t_list **list_b)
 	reverse_rotate(list_b);
 	ft_printf("rrr\n");
 }
+
+void	rotate_both(t_list *cheapest_node, t_list **a, t_list **b)
+{
+	while (*a != cheapest_node
+		&& *b != cheapest_node->target_node)
+		rr(a, b);
+	current_index(*a);
+	current_index(*b);
+}
+
+void	rev_rotate_both(t_list *cheapest_node, t_list **a, t_list **b)
+{
+	while (*a != cheapest_node
+		&& *b != cheapest_node->target_node)
+		rrr(a, b);
+	current_index(*a);
+	current_index(*b);
+}

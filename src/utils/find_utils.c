@@ -22,3 +22,32 @@ t_list	*find_last(t_list *list)
 		list = list->next;
 	return (list);
 }
+
+t_list	*find_min(t_list *list)
+{
+	t_list	*min;
+
+	if (!list)
+		return (list);
+	min = list;
+	while(list)
+	{
+		if (min->value > list->value)
+			min = list;
+		list = list->next;
+	}
+	return (min);
+}
+
+int	list_len(t_list *lst)
+{
+	int	i;
+
+	i = 0;
+	while (lst)
+	{
+		lst = lst->next;
+		i++;
+	}
+	return (i);
+}

@@ -6,7 +6,7 @@
 /*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 11:23:30 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/24 13:26:29 by mago             ###   ########.fr       */
+/*   Updated: 2025/03/01 13:32:53 by mago             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,21 @@ int	main(int argc, char **argv)
 	list_a = malloc(sizeof(t_list));
 	list_b = malloc(sizeof(t_list));
 	args = make_args(argc, argv);
-
 	if (!(check_input(argc, argv) == 1))
 	{
 		ft_printf("Error\n");
 		return (1);
 	}
-	list_init(list_a, list_b);
-	// set_up(list_a, args);
+	set_value(list_a, args);
+	if (!is_stack_sorted(list_a))
+	{
+		if (list_len(list_a) == 2)
+			sa(&list_a);
+		else if (list_len(list_a) == 3)
+			sort_three(&list_a);
+		else
+			sort_list(&list_a, &list_b);
+	}
 	return (0);
 }
 

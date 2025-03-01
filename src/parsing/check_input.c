@@ -6,7 +6,7 @@
 /*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 11:10:27 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/02/24 14:40:29 by mago             ###   ########.fr       */
+/*   Updated: 2025/03/01 12:36:00 by mago             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,27 +30,6 @@ static int	is_valid_number(char *str)
 		return (0);
 	return (1);
 }
-
-// int is_greater_than_max(const char *str)
-// {
-// 	int		i;
-// 	long	num;
-
-// 	i = 0;
-
-// 	while (str[i])
-// 	{
-// 		while (str[i] && (str[i] == ' ' || str[i] == '\t'))
-// 			i++;
-// 		num = ft_atoi(&str[i]);
-// 		if (num > INT_MAX || num < INT_MIN)
-// 			return (ft_printf("Error : number out of limits\n"), 1);
-// 		while (str[i] != ' ' && str[i] != '\t')
-// 			i++;
-// 		i++;
-// 	}
-// 	return (0);
-// }
 
 int	is_greater_than_max(const char *str)
 {
