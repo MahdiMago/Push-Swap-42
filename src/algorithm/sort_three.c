@@ -2,26 +2,19 @@
 
 void	sort_three(t_list **list)
 {
-	t_list	*big_num;
+	t_list	*big_value;
 
-	if ((*list)->value > (*list)->next->value
-	&& (*list)->next->value > (*list)->next->next->value)
-		return ;
-	big_num = find_big(*list);
+	big_value = find_big(*list);
 	printf_list(*list);
-	if (big_num->next == NULL)
+	if (big_value == *list)
 	{
-		reverse_rotate(list);
+		ra(list);
 	}
-	else if (big_num == *list)
+	else if (big_value == (*list)->next)
 	{
-		rotate(list);
+		rra(list);
 	}
-	else
-	{
-		swap(list);
-		printf_list(*list);
-		rotate(list);
-	}
+	if ((*list)->value > (*list)->next->value)
+		sa(list);
 	printf_list(*list);
 }

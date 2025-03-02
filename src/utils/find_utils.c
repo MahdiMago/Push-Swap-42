@@ -33,7 +33,7 @@ t_list	*find_min(t_list *list)
 	min_value = LONG_MAX;
 	while (list)
 	{
-		if (min_node->value > list->value)
+		if (min_value > list->value)
 		{
 			min_value = list->value;
 			min_node = list;
