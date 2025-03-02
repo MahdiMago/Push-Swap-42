@@ -6,7 +6,7 @@
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 11:23:30 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/03/01 15:30:45 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/03/02 12:17:02 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int	main(int argc, char **argv)
 
 	list_a = malloc(sizeof(t_list));
 	list_b = malloc(sizeof(t_list));
+	list_a = NULL;
+	list_b = NULL;
 	if (!(check_input(argc, argv) == 1))
 	{
 		ft_printf("Error\n");

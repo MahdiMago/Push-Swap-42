@@ -25,18 +25,22 @@ t_list	*find_last(t_list *list)
 
 t_list	*find_min(t_list *list)
 {
-	t_list	*min;
+	t_list	*min_node;
+	long	min_value;
 
 	if (!list)
-		return (list);
-	min = list;
-	while(list)
+		return (NULL);
+	min_value = LONG_MAX;
+	while (list)
 	{
-		if (min->value > list->value)
-			min = list;
+		if (min_node->value > list->value)
+		{
+			min_value = list->value;
+			min_node = list;
+		}
 		list = list->next;
 	}
-	return (min);
+	return (min_node);
 }
 
 int	list_len(t_list *lst)

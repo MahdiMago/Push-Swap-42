@@ -6,7 +6,7 @@
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 14:55:49 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/03/01 14:56:49 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/03/02 12:13:42 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ void	move_a_to_b(t_list **a, t_list **b)
 	prep_for_push(b, cheapest_node->target_node, false);
 	pb(a, b);
 }
-
 
 t_list	*get_cheapest(t_list *lst)
 {

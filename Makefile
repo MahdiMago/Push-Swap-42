@@ -15,7 +15,7 @@ LIBFT_DIR = includes/Libft
 SRC_FILES = main.c parsing/check_input.c free.c parsing/store.c \
 algorithm/init_node_a.c algorithm/sort.c algorithm/move_a_to_b.c algorithm/move_b_to_a.c \
 algorithm/sort_three.c rules/moves.c rules/swap.c utils/find_utils.c utils/ftt_lstnew.c \
-utils/ftt_lstadd_back.c utils/ftt_lstclear.c utils/print_list.c 
+utils/ftt_lstadd_back.c utils/ftt_lstclear.c utils/printf_list.c 
 
 LIBFT_FILES = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c \

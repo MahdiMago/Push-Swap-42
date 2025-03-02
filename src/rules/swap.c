@@ -6,7 +6,7 @@
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 20:47:02 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/03/01 15:04:33 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/03/02 11:35:11 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	swap(t_list **list)
 {
 	t_list *second;
 
-	if (!list || !(*list))
+	if (!list || !(*list) || !(*list)->next)
 		return ;
 	second = (*list)->next;
 	(*list)->next = second->next;
@@ -31,32 +31,37 @@ void	swap(t_list **list)
 */
 void	rotate(t_list **list)
 {
-	t_list *last;
+	t_list	*first;
+	t_list	*last;
 
-	if (!list || !(*list)->next || !(*list))
+	if (!list || !(*list) || !(*list)->next)
 		return ;
+
+	first = *list;
 	last = *list;
 	while (last->next)
 		last = last->next;
-	last->next = *list;
-	*list = (*list)->next;
-	last->next->next = NULL;
-	return ;
+	*list = first->next;
+	last->next = first;
+	first->next = NULL;
 }
 
 void	reverse_rotate(t_list **list)
 {
 	t_list	*last;
-	t_list	*new_head;
+	t_list	*prev;
 
 	if (!*list || !(*list)->next)
 		return ;
 	last = *list;
-	while (last->next->next)
+	while (last->next)
+	{
+		prev = last;
 		last = last->next;
-	last->next->next = *list;
-	new_head = last->next;
-	last->next = NULL;
+	}
+	prev->next = NULL;
+	last->next = *list;
+	*list = last;
 	return ;
 }
 

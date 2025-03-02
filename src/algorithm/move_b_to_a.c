@@ -18,7 +18,7 @@ void	set_target_b(t_list *a, t_list *b)
 					best_match_index = current_a->value;
 					target_node = current_a;
 				}
-				current_a = current_a->next;
+			current_a = current_a->next;
 		}
 		if (best_match_index == LONG_MAX)
 			b->target_node = find_min(a);

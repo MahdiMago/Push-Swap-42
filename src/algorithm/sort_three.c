@@ -12,18 +12,16 @@ void	sort_three(t_list **list)
 	if (big_num->next == NULL)
 	{
 		reverse_rotate(list);
-		printf_list(*list);
 	}
 	else if (big_num == *list)
 	{
 		rotate(list);
-		printf_list(*list);
 	}
 	else
 	{
 		swap(list);
 		printf_list(*list);
 		rotate(list);
-		printf_list(*list);
 	}
+	printf_list(*list);
 }
