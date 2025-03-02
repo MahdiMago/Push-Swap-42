@@ -6,7 +6,7 @@
 /*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 11:10:27 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/03/01 12:36:00 by mago             ###   ########.fr       */
+/*   Updated: 2025/03/02 14:06:35 by mago             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ int check_input(int argc, char **argv)
 	if (!check_characters(args) || check_duplicates(args))
 	{
 		if (argc == 2)
-			free_split(args);
+			free_split(args, true);
 		return (0);
 	}
 	return (1);
