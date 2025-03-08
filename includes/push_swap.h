@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 11:19:34 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/03/08 07:27:17 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/03/02 14:03:56 by mago             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,12 +68,13 @@ t_list	*find_min(t_list *list);
 void	sort_three(t_list **list);
 void	min_on_top(t_list **a);
 
-void	free_split(char **str);
+void	free_split(char **str, bool is_alocated);
+void	free_list(t_list **list, t_list **list_b);
 
 void	swap(t_list **list);
 void	rotate(t_list **list);
 void	reverse_rotate(t_list **list);
-void	push_list(t_list **top_1, t_list **top_2);
+void	push_list(t_list **top_1,  t_list **top_2);
 
 void	rotate_both(t_list *cheapest_node, t_list **a, t_list **b);
 void	rev_rotate_both(t_list *cheapest_node, t_list **a, t_list **b);
