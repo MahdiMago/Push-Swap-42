@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init_node_a.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/08 07:47:24 by mamagoma          #+#    #+#             */
+/*   Updated: 2025/03/08 07:49:34 by mamagoma         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
@@ -5,18 +16,18 @@ void	current_index(t_list *list)
 {
 	int	i;
 	int	median;
-	
+
 	i = 0;
 	if (!list)
-	return ;
+		return ;
 	median = list_len(list) / 2;
 	while (list)
 	{
 		list->index = i;
 		if (i <= median)
-		list->above_median = true;
+			list->above_median = true;
 		else
-		list->above_median = false;
+			list->above_median = false;
 		list = list->next;
 		i++;
 	}
@@ -72,7 +83,7 @@ static void	cost_analysis_a(t_list *a, t_list *b)
 
 void	cheapest_value(t_list *lst)
 {
-	t_list *cheapest_node;
+	t_list	*cheapest_node;
 	long	cheapest_value;
 
 	if (!lst)

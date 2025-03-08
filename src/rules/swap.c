@@ -6,7 +6,7 @@
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 20:47:02 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/03/02 11:35:11 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/03/08 07:46:31 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	swap(t_list **list)
 {
-	t_list *second;
+	t_list	*second;
 
 	if (!list || !(*list) || !(*list)->next)
 		return ;
@@ -36,7 +36,6 @@ void	rotate(t_list **list)
 
 	if (!list || !(*list) || !(*list)->next)
 		return ;
-
 	first = *list;
 	last = *list;
 	while (last->next)
@@ -68,7 +67,7 @@ void	reverse_rotate(t_list **list)
 /*
 * the first param will be pushed in the top of the second
 */
-void	push_list(t_list **top_1,  t_list **top_2)
+void	push_list(t_list **top_1, t_list **top_2)
 {
 	t_list	*new_head;
 

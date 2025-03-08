@@ -1,56 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   moves.c                                            :+:      :+:    :+:   */
+/*   moves copy 2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 07:35:01 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/03/08 07:40:31 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/03/08 07:40:36 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	sa(t_list **list_a)
-{
-	if (!list_a || !(*list_a) || !(*list_a)->next)
-		return ;
-	swap(list_a);
-	ft_printf("sa\n");
-}
-
-void	sb(t_list **list_b)
-{
-	if (!list_b || !(*list_b) || !(*list_b)->next)
-		return ;
-	swap(list_b);
-	ft_printf("sb\n");
-}
-
-void	ss(t_list **list_a, t_list **list_b)
+void	rrr(t_list **list_a, t_list **list_b)
 {
 	if (!list_a || !list_b || !(*list_a)
 		|| !(*list_a)->next || !(*list_b)
 		|| !(*list_b)->next)
 		return ;
-	swap(list_a);
-	swap(list_b);
-	ft_printf("ss\n");
+	reverse_rotate(list_a);
+	reverse_rotate(list_b);
+	ft_printf("rrr\n");
 }
 
-void	pa(t_list **list_a, t_list **list_b)
+void	rotate_both(t_list *cheapest_node, t_list **a, t_list **b)
 {
-	if (!list_a || !list_b || !(*list_b))
-		return ;
-	push_list(list_b, list_a);
-	ft_printf("pa\n");
+	while (*a != cheapest_node && *b != cheapest_node->target_node)
+		rr(a, b);
+	while (*a != cheapest_node)
+		ra(a);
+	while (*b != cheapest_node->target_node)
+		rb(b);
+	current_index(*a);
+	current_index(*b);
 }
 
-void	pb(t_list **list_a, t_list **list_b)
+void	rev_rotate_both(t_list *cheapest_node, t_list **a, t_list **b)
 {
-	if (!list_a || !list_b || !(*list_a))
-		return ;
-	push_list(list_a, list_b);
-	ft_printf("pb\n");
+	while (*a != cheapest_node && *b != cheapest_node->target_node)
+		rrr(a, b);
+	while (*a != cheapest_node)
+		rra(a);
+	while (*b != cheapest_node->target_node)
+		rrb(b);
+	current_index(*a);
+	current_index(*b);
 }

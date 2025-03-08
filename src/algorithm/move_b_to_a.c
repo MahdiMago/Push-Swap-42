@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   move_b_to_a.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/08 07:47:29 by mamagoma          #+#    #+#             */
+/*   Updated: 2025/03/08 07:50:41 by mamagoma         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../includes/push_swap.h"
 
 void	set_target_b(t_list *a, t_list *b)
@@ -14,10 +26,10 @@ void	set_target_b(t_list *a, t_list *b)
 		{
 			if (current_a->value > b->value
 				&& current_a->value < best_match_index)
-				{
-					best_match_index = current_a->value;
-					target_node = current_a;
-				}
+			{
+				best_match_index = current_a->value;
+				target_node = current_a;
+			}
 			current_a = current_a->next;
 		}
 		if (best_match_index == LONG_MAX)
