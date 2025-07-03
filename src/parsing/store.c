@@ -6,11 +6,33 @@
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 12:02:36 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/03/01 15:39:04 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/07/03 20:36:54 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
+
+void	set_index(t_list **list_a)
+{
+	t_list	*current;
+	t_list	*other;
+	int		index;
+
+	current = *list_a;
+	while (current)
+	{
+		index = 0;
+		other = *list_a;
+		while (other)
+		{
+			if (other->value < current->value)
+				index++;
+			other = other->next;
+		}
+		current->index = index;
+		current = current->next;
+	}
+}
 
 void	set_value(t_list **list_a, char **args)
 {
@@ -29,4 +51,5 @@ void	set_value(t_list **list_a, char **args)
 		ftt_lstadd_back(list_a, new_node);
 		i++;
 	}
+	set_index(list_a);
 }

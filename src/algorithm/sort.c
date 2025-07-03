@@ -35,19 +35,16 @@ int	sort_list(t_list **a, t_list **b)
 		pb(a, b);
 	while (len_a-- > 3 && !is_stack_sorted(*a))
 	{
-		printf_list(*a);
 		init_node_a(*a, *b);
 		move_a_to_b(a, b);
 	}
 	sort_three(a);
 	while (*b)
 	{
-		printf_list(*a);
 		init_nodes_b(*a, *b);
 		move_b_to_a(a, b);
 	}
 	current_index(*a);
 	min_on_top(a);
-	printf_list(*a);
 	return (0);
 }

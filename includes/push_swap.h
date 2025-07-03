@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 11:19:34 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/03/02 14:03:56 by mago             ###   ########.fr       */
+/*   Updated: 2025/07/03 19:55:42 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ t_list	*find_min(t_list *list);
 int		list_len(t_list *lst);
 
 int		sort_list(t_list **a, t_list **b);
-void	printf_list(t_list *list);
 
 void	init_nodes_b(t_list *a, t_list *b);
 void	set_target_b(t_list *a, t_list *b);

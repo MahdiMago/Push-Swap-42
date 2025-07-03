@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init_node_a.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/14 14:41:54 by mamagoma          #+#    #+#             */
+/*   Updated: 2025/05/14 14:56:32 by mamagoma         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #include "../../includes/push_swap.h"
 
@@ -8,15 +20,15 @@ void	current_index(t_list *list)
 	
 	i = 0;
 	if (!list)
-	return ;
+		return ;
 	median = list_len(list) / 2;
 	while (list)
 	{
 		list->index = i;
 		if (i <= median)
-		list->above_median = true;
+			list->above_median = true;
 		else
-		list->above_median = false;
+			list->above_median = false;
 		list = list->next;
 		i++;
 	}
@@ -77,10 +89,11 @@ void	cheapest_value(t_list *lst)
 
 	if (!lst)
 		return ;
-	cheapest_value = LONG_MIN;
+	cheapest_value = LONG_MAX;
 	while (lst)
 	{
-		if (lst->push_cost > cheapest_value)
+		lst->cheapest = false;
+		if (lst->push_cost < cheapest_value)
 		{
 			cheapest_value = lst->push_cost;
 			cheapest_node = lst;

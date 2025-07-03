@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 11:10:27 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/03/02 14:06:35 by mago             ###   ########.fr       */
+/*   Updated: 2025/03/08 14:09:15 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	is_greater_than_max(const char *str)
 	return (0);
 }
 
-int check_characters(char **args)
+int	check_characters(char **args)
 {
 	int	i;
 
@@ -60,7 +60,7 @@ int check_characters(char **args)
 	return (1);
 }
 
-int check_duplicates(char **args)
+int	check_duplicates(char **args)
 {
 	int	i;
 	int	j;
@@ -80,7 +80,7 @@ int check_duplicates(char **args)
 	return (0);
 }
 
-int check_input(int argc, char **argv)
+int	check_input(int argc, char **argv)
 {
 	char	**args;
 

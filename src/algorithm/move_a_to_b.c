@@ -6,7 +6,7 @@
 /*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 14:55:49 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/03/02 12:13:42 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/05/14 15:24:56 by mamagoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 */
 void	prep_for_push(t_list **lst, t_list *top_node, bool ab)
 {
+	if (*lst == top_node)
+		return ;
 	while (*lst != top_node)
 	{
 		if (ab == true)
@@ -32,7 +34,9 @@ void	prep_for_push(t_list **lst, t_list *top_node, bool ab)
 			if (top_node->above_median)
 				rb(lst);
 			else
+			{
 				rrb(lst);
+			}
 		}
 	}
 }
@@ -59,8 +63,10 @@ t_list	*get_cheapest(t_list *lst)
 	while (lst)
 	{
 		if (lst->cheapest == true)
+		{
 			return (lst);
+		}
 		lst = lst->next;
 	}
-	return (lst);
+	return (NULL);
 }
