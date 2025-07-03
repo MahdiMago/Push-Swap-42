@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mamagoma <mamagoma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mago <mago@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 11:19:34 by mamagoma          #+#    #+#             */
-/*   Updated: 2025/07/03 19:55:42 by mamagoma         ###   ########.fr       */
+/*   Updated: 2025/07/04 00:30:37 by mago             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,9 @@ void	pa(t_list **list_a, t_list **list_b);
 void	pb(t_list **list_a, t_list **list_b);
 void	rr(t_list **list_a, t_list **list_b);
 void	rrr(t_list **list_a, t_list **list_b);
+
+// RADIX :
+void		radix_sort(t_list **stack_a, t_list **stack_b);
+int	ftt_lstsize(t_list *lst);
 
 #endif
